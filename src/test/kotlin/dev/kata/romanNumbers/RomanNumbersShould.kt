@@ -40,4 +40,14 @@ internal class RomanNumbersShould {
         assertThat(result2).isEqualTo("XLIV")
         assertThat(result).isEqualTo("IV")
     }
+    @Test
+    fun `Should not contain more than three symbols of base 5`() {
+        val romanNumbers = RomanNumbers()
+        val result = romanNumbers.romanNumberCreator(5)
+        val result2 = romanNumbers.romanNumberCreator(50)
+        val result3 = romanNumbers.romanNumberCreator(500)
+        assertThat(result3).isEqualTo("D")
+        assertThat(result2).isEqualTo("L")
+        assertThat(result).isEqualTo("V")
+    }
 }
