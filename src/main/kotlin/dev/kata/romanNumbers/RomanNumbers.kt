@@ -31,13 +31,13 @@ class RomanNumbers {
                 numberTransform -= 10
             }else if (numberTransform == 9){
                 output += "IX"
-                numberTransform -= 0
+                numberTransform -= 9
             } else if (output.count{it == 'V'} == 0 && numberTransform >= 5){
                 output += "V"
                 numberTransform -= 5
             } else if (numberTransform == 4){
                 output += "IV"
-                numberTransform -= 0
+                numberTransform -= 4
             } else if (output.count{it == 'I'} < 3 && numberTransform >= 1){
                 output += "I"
                 numberTransform--
