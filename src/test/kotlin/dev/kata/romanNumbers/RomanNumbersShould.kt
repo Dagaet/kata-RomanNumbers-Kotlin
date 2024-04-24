@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 
 internal class RomanNumbersShould {
     @Test
-    fun `Should not contain more than three symbols of base 1`() {
+    fun `Not contain more than three symbols of base 1`() {
         val romanNumbers = RomanNumbers()
         val result = romanNumbers.romanNumberCreator(3)
         val result2 = romanNumbers.romanNumberCreator(30)
@@ -21,7 +21,7 @@ internal class RomanNumbersShould {
         assertThat(result).isEqualTo("III")
     }
     @Test
-    fun `Should set nines like IX`() {
+    fun `Set nines like IX`() {
         val romanNumbers = RomanNumbers()
         val result = romanNumbers.romanNumberCreator(9)
         val result2 = romanNumbers.romanNumberCreator(39)
@@ -31,7 +31,7 @@ internal class RomanNumbersShould {
         assertThat(result).isEqualTo("IX")
     }
     @Test
-    fun `Should set fours like IV`() {
+    fun `Set fours like IV`() {
         val romanNumbers = RomanNumbers()
         val result = romanNumbers.romanNumberCreator(4)
         val result2 = romanNumbers.romanNumberCreator(44)
@@ -41,7 +41,7 @@ internal class RomanNumbersShould {
         assertThat(result).isEqualTo("IV")
     }
     @Test
-    fun `Should not contain more than three symbols of base 5`() {
+    fun `Not contain more than three symbols of base 5`() {
         val romanNumbers = RomanNumbers()
         val result = romanNumbers.romanNumberCreator(5)
         val result2 = romanNumbers.romanNumberCreator(50)
