@@ -20,4 +20,14 @@ internal class RomanNumbersShould {
         assertThat(result2).isEqualTo("XXX")
         assertThat(result).isEqualTo("III")
     }
+    @Test
+    fun `Should set nines like IX`() {
+        val romanNumbers = RomanNumbers()
+        val result = romanNumbers.romanNumberCreator(9)
+        val result2 = romanNumbers.romanNumberCreator(39)
+        val result3 = romanNumbers.romanNumberCreator(309)
+        assertThat(result3).isEqualTo("CCCIX")
+        assertThat(result2).isEqualTo("XXXIX")
+        assertThat(result).isEqualTo("IX")
+    }
 }
