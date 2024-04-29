@@ -1,48 +1,50 @@
 package dev.kata.romanNumbers
 
 class RomanNumbers {
+//    cambiar nombre
+//    translate transform converse
     fun romanNumberCreator(numeriten: Int): String {
-        var output: String = ""
+        var romanNumber: String = ""
         var numberTransform = numeriten
         for (i in numberTransform downTo 0){
-            if (output.count{it == 'M'} < 3 && numberTransform >= 1000){
-                output += "M"
+            if (romanNumber.count{it == 'M'} < 3 && numberTransform >= 1000){
+                romanNumber += "M"
                 numberTransform -= 1000
-            } else if (output.count{it == 'D'} == 0 && numberTransform >= 500){
-                output += "D"
+            } else if (romanNumber.count{it == 'D'} == 0 && numberTransform >= 500){
+                romanNumber += "D"
                 numberTransform -= 500
             } else if (numberTransform >= 400){
-                output += "CD"
+                romanNumber += "CD"
                 numberTransform -= 400
-            } else if (output.count{it == 'C'} < 3 && numberTransform >= 100){
-                output += "C"
+            } else if (romanNumber.count{it == 'C'} < 3 && numberTransform >= 100){
+                romanNumber += "C"
                 numberTransform -= 100
             }else if (numberTransform in 91..99){
-                output += "XC"
+                romanNumber += "XC"
                 numberTransform -= 90
-            } else if (output.count{it == 'L'} == 0 && numberTransform >= 50){
-                output += "L"
+            } else if (romanNumber.count{it == 'L'} == 0 && numberTransform >= 50){
+                romanNumber += "L"
                 numberTransform -= 50
             } else if (numberTransform >= 40){
-                output += "XL"
+                romanNumber += "XL"
                 numberTransform -= 40
-            } else if (output.count{it == 'X'} < 3 && numberTransform >= 10){
-                output += "X"
+            } else if (romanNumber.count{it == 'X'} < 3 && numberTransform >= 10){
+                romanNumber += "X"
                 numberTransform -= 10
             }else if (numberTransform == 9){
-                output += "IX"
+                romanNumber += "IX"
                 numberTransform -= 9
-            } else if (output.count{it == 'V'} == 0 && numberTransform >= 5){
-                output += "V"
+            } else if (romanNumber.count{it == 'V'} == 0 && numberTransform >= 5){
+                romanNumber += "V"
                 numberTransform -= 5
             } else if (numberTransform == 4){
-                output += "IV"
+                romanNumber += "IV"
                 numberTransform -= 4
-            } else if (output.count{it == 'I'} < 3 && numberTransform >= 1){
-                output += "I"
+            } else if (romanNumber.count{it == 'I'} < 3 && numberTransform >= 1){
+                romanNumber += "I"
                 numberTransform--
             }
         }
-        return output
+        return romanNumber
     }
 }
